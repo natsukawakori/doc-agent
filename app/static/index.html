@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DuReader 文档助手</title>
+  <link rel="stylesheet" href="/static/vendor/katex.min.css">
+  <link rel="stylesheet" href="/static/style.css?v=20261111-ui2">
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <div><span class="eyebrow">本地检索 · Agent 测试</span><h1>DuReader 文档助手</h1>
+        <p>输入问题，查看检索、工具结果和有来源的回答。</p></div>
+      <div><a href="/super" style="color:#287d62;margin-right:14px">Super-agent 工单实验</a><span class="badge busy" id="status" role="status" aria-live="polite">正在连接</span></div>
+    </header>
+    <div class="layout">
+      <section class="panel conversation">
+        <div class="section-head"><div><h2>对话</h2><p>同一页面内支持连续追问。</p></div></div>
+        <form id="form"><label for="question">你的问题</label>
+          <textarea id="question" rows="3" maxlength="2000" placeholder="例如：Native App 是什么？（Ctrl/⌘ + Enter 发送）" required></textarea>
+          <div class="form-footer"><span>回答会调用已配置的 LLM；记录保存在本机。</span><div class="form-buttons"><button id="stop" class="secondary" type="button" disabled>停止</button><button id="send" type="submit">发送问题</button></div></div>
+        </form>
+        <div class="recommendations"><div class="recommendation-head"><span>试试这些问题（资料可能过时）</span><button id="refresh" class="secondary" type="button">换一组</button></div><div id="suggestions" class="chips"></div></div>
+        <div id="messages" class="messages"><p class="empty">选择推荐问题，或输入你想了解的内容。</p></div>
+      </section>
+      <aside class="panel actions">
+        <div class="section-head"><div><h2>Agent 动作</h2><p>显示模型可见输出和实际工具调用，不展示内部推理。</p></div></div>
+        <div id="events" class="events"><p class="empty">运行后，步骤会实时出现在这里。</p></div>
+      </aside>
+    </div>
+    <footer>DuReader 网页语料可能过时或有误。请核对来源；检索一次可能需要数十秒。普通对话断开后会在可控边界停止，已发出的调用可能仍需等待。</footer>
+  </main>
+  <script src="/static/vendor/marked.umd.js" defer></script>
+  <script src="/static/vendor/purify.min.js" defer></script>
+  <script src="/static/vendor/katex.min.js" defer></script>
+  <script src="/static/render.js" defer></script>
+  <script src="/static/app.js?v=20261111-ui2" defer></script>
+</body>
+</html>

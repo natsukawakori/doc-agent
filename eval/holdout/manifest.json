@@ -1,0 +1,29 @@
+{
+  "controlled_count": 10,
+  "controlled_sha256": "fcfbfb6a08ad209627fe56e85e194e564f1840a1b8631abfe3662477a21a3cce",
+  "count": 30,
+  "eligible_before_selection_dedup": 1590,
+  "holdout_sha256": "e83b67bd3266fbc74a80195c5741bb839c99a2fc9bdd340885963dc694279ad6",
+  "inputs": {
+    "app/static/super.js": "ac9eb040b3c31238f127d7f427665e60a8efe52ed463f647cc08d9ba13b5de50",
+    "dev.jsonl.gz": "72fbf56f18e162bcec5f8c2c8940f2fe331e7e67336606a7b591047696281c32",
+    "eval/cases.jsonl": "bb80164b9c1fef0a0797046fe5c2627262b1927611256599d530a99699915178",
+    "eval/evidence_challenge_v1.jsonl": "5c833529b9e6c50635520983f642be1819a1fbf3d813361878125f8ad23c8639",
+    "eval/offline_scenarios.jsonl": "7c09b94b48db3f6ccde30eb28d6b21a458ad07b4edd8fee56a128e4b0921cdfb",
+    "eval/risk_boundary_v1.jsonl": "a5d77c84c5444f1a6dac3988baf48a4a62eda41a203accf05efc239b9333e98b",
+    "eval/risk_challenge_v1.jsonl": "3351f398501d69a543ad5a67a7bd98f38c9f468dc743c384a2f531e455f9e8af",
+    "eval/risk_expanded_v1.jsonl": "dc5ec21d795a75226162e1a720ab5fd2dff1cb8383f875b6c17d58bc1a967adc",
+    "eval/risk_prompt_holdout_v1.jsonl": "557e68bc56ba7f3bc0452f5912765d93df3fc43f100a8f3055c04e3f603bfcde",
+    "full_queries.json": "723ee7d23a68e6edb6485e02192d34a93fbd8dbd1a5c3d16cffbd32061318b72",
+    "holdout_30.jsonl": "ceceac0f48e34f1b3410773a93e1f5c024075b39f1267574df29cd62f1610f81",
+    "holdout_30_v2.jsonl": "4a25776f4f983212e0d1cf891e85e5873c667021fb100fb7d6562e14b9422a62",
+    "holdout_30_v3.jsonl": "591a53d88592a6058c41a2d4a013c79e603564ceac6d5add53339c52a4701a1f",
+    "subset.json": "07708dbaaa4e52120a07d83ebb8746d76cb51c63e0009b17eaf9ed4de89601cc"
+  },
+  "limits": "完全重复排除不证明语义独立；无依据题为合成受控材料。",
+  "prior_records": 596,
+  "sampler_sha256": "a1c3a51eb28a9272c57e5492245d7d3935ba99a3675b15fe8c41236ff73de62e",
+  "schema": 1,
+  "seed": "doc-agent-final-holdout-20261111-v4",
+  "selection_dependency_sha256": "8b50845d051ea1fd3456ff165e2f60358c8b710ebea411a19176ff577529ca8f"
+}

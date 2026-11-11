@@ -1,0 +1,11 @@
+{
+  "count": 30,
+  "eligible_before_selection_dedup": 1681,
+  "full_queries_sha256": "723ee7d23a68e6edb6485e02192d34a93fbd8dbd1a5c3d16cffbd32061318b72",
+  "holdout_sha256": "ceceac0f48e34f1b3410773a93e1f5c024075b39f1267574df29cd62f1610f81",
+  "sampler_sha256": "d787b886ae265d81307592ff39f58b6e0d79c2da8396119d4fad218e688a0681",
+  "schema": 1,
+  "seed": "doc-agent-holdout-20261106-v1",
+  "source_sha256": "72fbf56f18e162bcec5f8c2c8940f2fe331e7e67336606a7b591047696281c32",
+  "subset_sha256": "07708dbaaa4e52120a07d83ebb8746d76cb51c63e0009b17eaf9ed4de89601cc"
+}

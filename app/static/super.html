@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Super-agent 工单实验</title>
+  <link rel="stylesheet" href="/static/vendor/katex.min.css"><link rel="stylesheet" href="/static/style.css?v=20261111-ui2"><link rel="stylesheet" href="/static/super.css?v=20261111-ui2">
+</head>
+<body><main class="shell">
+  <header><div><span class="eyebrow">本地学习实验 · 双层 Agent</span><h1>Super-agent 工单实验</h1>
+    <p>模拟事件接入、工单执行和检索策略切换。</p></div><div><a href="/">返回文档助手</a><span class="badge busy" id="status" role="status" aria-live="polite">正在连接</span></div></header>
+  <div class="super-layout">
+    <section class="panel controls">
+      <div class="section-head"><div><h2>① 模拟身份与接单策略</h2><p>身份仅供本机实验，不是真实登录认证。</p></div></div>
+      <div class="fields"><label>模拟身份<select id="role"><option value="owner">项目所有者</option><option value="visitor">普通访客</option><option value="bot">模拟机器人</option></select></label>
+      <label>事件类型<select id="kind"><option value="submit">明确提交</option><option value="inferred">模拟推断事件</option></select></label>
+      <label>接单模式<select id="mode"><option value="off">off · 不自动接收</option><option value="observe">observe · 只观察</option><option value="auto">auto · 自动接单</option></select></label></div>
+      <p id="identity-info" class="hint"></p><div class="checks"><label><input type="checkbox" id="owner-allowed" checked> 允许所有者</label><label><input type="checkbox" id="visitor-allowed"> 允许访客</label><label><input type="checkbox" id="bot-allowed" checked> 允许机器人推断</label><label><input type="checkbox" id="rule-enabled" checked> 启用文档问答规则</label></div>
+      <div class="button-row"><button class="secondary" id="save-policy" type="button">应用接单策略</button><span id="policy-status" class="hint"></span></div>
+      <hr><div class="section-head"><div><h2>② 任务规划与检索强度</h2><p>输入目标，外层 Agent 接单后规划问题，内层依次执行。</p></div><button class="secondary" id="example" type="button">随机填入示例</button></div>
+      <p id="example-hint" class="hint">示例依据本地语料整理；可再次点击更换，也可以自行编辑。</p>
+      <label for="plan-mode">规划方式</label><select id="plan-mode"><option value="auto">外层 Agent 自动规划</option><option value="manual">手动输入问题清单</option></select>
+      <label for="trigger-text">原始任务目标</label><textarea id="trigger-text" maxlength="2000" rows="3" placeholder="例如：比较 Native App 和 Web App，并注明来源"></textarea>
+      <div id="manual-questions" hidden><label for="questions">问题清单</label><textarea id="questions" rows="5" placeholder="每行一个问题，最多 8 题"></textarea></div>
+      <label for="level">检索强度：<span id="level-label"></span></label><input type="range" id="level" min="0" max="3" value="1" step="1"><p id="level-help" class="hint"></p>
+      <p class="hint">联网时，搜索词会发送给外部搜索服务。最高档保证尝试，不保证成功或资料正确。</p>
+      <div class="button-row"><button id="submit-trigger" type="button">提交事件</button><span id="trigger-status" class="hint"></span></div>
+      <div id="decision" class="result-box" hidden></div>
+      <hr><div class="section-head"><div><h2>③ 工单控制</h2><p id="ticket-summary">尚无工单</p></div><button class="secondary" id="refresh-ticket" type="button">刷新</button></div>
+      <div class="button-row"><button id="run-one" type="button" disabled>执行一题并暂停</button><button id="run-all" type="button" disabled>执行剩余题目</button><button class="secondary" id="pause" type="button" disabled>请求暂停</button></div>
+      <div class="button-row"><button class="secondary" id="apply-level" type="button" disabled>将当前强度应用到工单</button><label class="inline"><input type="checkbox" id="retry"> 重试失败的题目或最终汇总</label></div>
+      <p class="hint">强度和暂停在题目边界生效；关闭页面后工单继续在后台执行，可重新打开页面查看。达到任务期限会在可控边界停止，已完成结果保留。</p>
+      <div id="requeue" hidden class="result-box"></div>
+    </section>
+    <section class="panel output"><div class="section-head"><div><h2>工单与 Agent 动作</h2><p>逐题显示回答、实际工具事件与状态；不展示内部推理。</p></div></div>
+      <section id="final-box" class="result-box" hidden><h3>最终综合回答</h3><p id="final-status" class="hint"></p><div id="final-content" class="rich"></div></section>
+      <h3>子问题与回答</h3><div id="ticket-questions" class="ticket-questions"><p class="empty">提交事件并接单后，工单会显示在这里。</p></div>
+      <h3>实时动作</h3><div id="events" class="events super-events"><p class="empty">运行工单后显示动作。</p></div>
+    </section>
+  </div>
+  <footer>模拟权限仅用于学习；本地及联网资料可能过时或有误。推断事件的外层研判会调用配置的 LLM API。</footer>
+</main><script src="/static/vendor/marked.umd.js" defer></script><script src="/static/vendor/purify.min.js" defer></script><script src="/static/vendor/katex.min.js" defer></script><script src="/static/render.js" defer></script><script src="/static/super.js?v=20261111-ui2" defer></script></body></html>

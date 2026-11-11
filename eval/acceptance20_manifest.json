@@ -1,0 +1,7 @@
+{
+  "selection_rule": "first 20 ids in the previously frozen full_queries_manifest.json, no hand selection",
+  "source_manifest": "eval/full_queries_manifest.json",
+  "queries_sha256": "723ee7d23a68e6edb6485e02192d34a93fbd8dbd1a5c3d16cffbd32061318b72",
+  "query_ids": ["1703", "1461", "507", "764", "869", "1158", "1369", "50", "549", "906", "14", "1500", "1979", "1256", "1357", "1871", "1433", "1600", "173", "1061"],
+  "note": "Selected before this agent acceptance run, from a development subset previously used for retrieval experiments; not an independent hidden test."
+}

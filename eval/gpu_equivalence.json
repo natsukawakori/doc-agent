@@ -1,0 +1,6 @@
+{
+  "queries": 50,
+  "matching_metrics": 50,
+  "differences": [],
+  "note": "Compares per-query metrics, not complete ranking identity."
+}

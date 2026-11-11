@@ -1,0 +1,20 @@
+{"id": 1, "question": "智能体与环境如何交互？", "must_include": ["感知", "行动"], "gold_chapter": "chapter1", "category": "retrieval"}
+{"id": 2, "question": "语言模型驱动的智能体为什么需要工具？", "must_include": ["工具"], "gold_chapter": "chapter1", "category": "retrieval"}
+{"id": 3, "question": "ELIZA 主要依靠什么机制生成回答？", "must_include": ["模式", "匹配"], "gold_chapter": "chapter2", "category": "retrieval"}
+{"id": 4, "question": "专家系统有哪些核心组成？", "must_include": ["知识", "推理"], "gold_chapter": "chapter2", "category": "retrieval"}
+{"id": 5, "question": "Transformer 的自注意力机制有什么作用？", "must_include": ["注意力"], "gold_chapter": "chapter3", "category": "retrieval"}
+{"id": 6, "question": "Decoder-Only 架构的语言模型如何生成文本？", "must_include": ["生成"], "gold_chapter": "chapter3", "category": "retrieval"}
+{"id": 7, "question": "ReAct 的核心循环包括哪三个环节？", "must_include": ["思考", "行动", "观察"], "gold_chapter": "chapter4", "category": "retrieval"}
+{"id": 8, "question": "Plan-and-Solve 将任务分成哪两个阶段？", "must_include": ["规划", "执行"], "gold_chapter": "chapter4", "category": "retrieval"}
+{"id": 9, "question": "Reflection 如何迭代改进智能体的结果？", "must_include": ["反思", "优化"], "gold_chapter": "chapter4", "category": "retrieval"}
+{"id": 10, "question": "低代码平台对智能体开发有哪些价值？", "must_include": ["开发"], "gold_chapter": "chapter5", "category": "retrieval"}
+{"id": 11, "question": "为什么智能体需要记忆和 RAG？", "must_include": ["记忆", "检索"], "gold_chapter": "chapter8", "category": "retrieval"}
+{"id": 12, "question": "构建智能体框架有什么价值？", "must_include": ["框架"], "gold_chapter": "chapter7", "category": "retrieval"}
+{"id": 13, "question": "请读取第一章中智能体的构成与运行原理，说明感知和行动的关系，并注明文件来源。", "must_include": ["感知", "行动"], "gold_chapter": "chapter1", "category": "tool"}
+{"id": 14, "question": "请读取第二章中 ELIZA 的设计思想，解释它如何应答，并注明文件来源。", "must_include": ["ELIZA", "模式"], "gold_chapter": "chapter2", "category": "tool"}
+{"id": 15, "question": "请读取第三章 Transformer 架构解析，解释自注意力，并注明文件来源。", "must_include": ["注意力"], "gold_chapter": "chapter3", "category": "tool"}
+{"id": 16, "question": "请读取第四章关于 ReAct 的工作流程，列出它的核心环节并注明文件来源。", "must_include": ["思考", "行动", "观察"], "gold_chapter": "chapter4", "category": "tool"}
+{"id": 17, "question": "请读取第五章的平台选择内容，列出文中提到的两个平台并注明来源。", "must_include": ["Coze", "Dify"], "gold_chapter": "chapter5", "category": "tool"}
+{"id": 18, "question": "比较 ReAct 和 Plan-and-Solve 的步骤组织方式，说明二者对计划与行动的不同处理。", "must_include": ["ReAct", "Plan-and-Solve"], "gold_chapter": "chapter4", "category": "reasoning"}
+{"id": 19, "question": "如果智能体需要先执行任务再根据反馈改进，应选第四章哪种范式？解释其循环。", "must_include": ["Reflection", "反思"], "gold_chapter": "chapter4", "category": "reasoning"}
+{"id": 20, "question": "结合第八章说明：为什么仅靠模型参数可能不够，记忆和检索分别能带来什么？", "must_include": ["记忆", "检索"], "gold_chapter": "chapter8", "category": "reasoning"}

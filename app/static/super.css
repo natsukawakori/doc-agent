@@ -1,0 +1,17 @@
+.super-layout { display:grid; grid-template-columns:minmax(320px, .9fr) minmax(0, 1.1fr); gap:20px; align-items:start; }
+.controls,.output { min-width:0; }
+.fields { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; margin:16px 0 8px; }
+select, input:not([type=checkbox]):not([type=range]) { width:100%; border:1px solid #d6e4da; border-radius:9px; padding:10px; font:inherit; background:#fff; color:#1e3031; }
+input[type=range] { width:100%; accent-color:#287d62; }
+.checks { display:flex; flex-wrap:wrap; gap:8px 16px; margin:12px 0; }
+.checks label,.inline { display:flex; align-items:center; gap:5px; margin:0; font-weight:400; }
+.button-row { display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0; }
+.hint { color:#6b7e7b; font-size:12px; line-height:1.6; }
+.result-box { border:1px solid #d6e9dd; border-radius:10px; background:#f4f9f5; padding:12px; margin:12px 0; font-size:13px; white-space:pre-wrap; overflow-wrap:anywhere; }
+hr { border:0; border-top:1px solid #e6eee9; margin:20px 0; }
+.controls textarea { margin-bottom:14px; }.controls input:not([type=checkbox]) { margin-bottom:12px; }
+.ticket-questions { margin:12px 0; }.question-card { background:#f5f8f6; border-radius:10px; padding:12px; margin-bottom:9px; overflow-wrap:anywhere; }
+.question-card h4 { margin:0 0 8px; font-size:13px; }.question-card .rich { font-size:13px; line-height:1.7; }
+.output h3 { font-size:14px; margin:14px 0 0; }.super-events { min-height:200px; }
+header a { color:#287d62; margin-right:14px; font-size:13px; }
+@media(max-width:850px){.super-layout{grid-template-columns:1fr}.fields{grid-template-columns:1fr}.ticket-questions{max-height:none}}

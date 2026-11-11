@@ -1,0 +1,49 @@
+:root { color-scheme: light; font-family: "Microsoft YaHei", system-ui, sans-serif; color: #1e3031; background: #f3f6f3; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+.shell { max-width: 1380px; margin: auto; padding: 36px 32px; }
+header, .section-head, .form-footer { display: flex; justify-content: space-between; align-items: center; gap: 18px; }
+header { margin-bottom: 26px; align-items: flex-end; }
+h1 { font-size: 31px; margin: 8px 0; letter-spacing: -.6px; }
+h2 { font-size: 17px; margin: 0 0 6px; }
+p { margin: 0; color: #6b7e7b; line-height: 1.55; font-size: 13px; }
+.eyebrow { font-size: 12px; letter-spacing: 1.4px; font-weight: 700; color: #398a70; }
+.badge { border-radius: 20px; padding: 8px 14px; font-size: 12px; white-space: nowrap; }
+.badge.ok { background:#e3f1e9; color:#2f7a5e; }.badge.busy { background:#fdf3dc; color:#765815; }.badge.err { background:#fbe6e3; color:#a3453a; }
+.panel { background: #fff; border: 1px solid #e1ebe5; border-radius: 16px; padding: 22px; box-shadow: 0 8px 26px #284e3910; }
+.recommendations { margin-top:16px; }.recommendation-head { display:flex; align-items:center; justify-content:space-between; gap:10px; color:#5c6f6c; font-size:12px; }.recommendation-head button { padding:6px 10px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+button { border: 0; cursor: pointer; border-radius: 9px; padding: 10px 16px; background: #287d62; color: white; font-weight: 600; font-size: 13px; }
+button:hover { background: #206c53; }
+button:disabled { cursor: not-allowed; opacity: .5; }
+button.secondary, button.chip { background: #eef5f0; color: #386b59; }
+button.chip { text-align: left; font-weight: 400; }
+button.secondary:hover, button.chip:hover { background: #dcece1; }
+.layout { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(300px, .85fr); gap: 20px; align-items: stretch; }
+.conversation, .actions { min-height: 520px; display: flex; flex-direction: column; }
+.messages, .events { flex: 1; min-width:0; padding: 18px 0; }
+.empty { color: #9aa9a4; padding: 20px 0; }
+.message, .event { margin: 0 0 12px; padding: 13px 15px; border-radius: 11px; background: #f4f8f5; font-size: 13px; line-height: 1.7; overflow-wrap: anywhere; white-space: pre-wrap; }
+.message.user { background: #e4f2e9; margin-left: 8%; }
+.message.assistant { background: #f3f5f4; margin-right: 8%; }
+.event { border-left: 3px solid #cfe0d6; background: #f8faf8; }
+.event.tool { border-left-color:#5b9bd5; background:#f5f9fd; }.event.answer { border-left-color:#4a9e7a; background:#f4faf7; }.event.error { border-left-color:#d3766a; background:#fdf5f3; }.event.stop { border-left-color:#b09a5e; background:#fbf8f0; }
+.rich { white-space: normal; }
+.rich p { color: inherit; font-size: inherit; margin: .55em 0; }
+.rich h1, .rich h2, .rich h3 { margin: .8em 0 .4em; font-size: 1.1em; }
+.rich ul, .rich ol { padding-left: 1.6em; }
+.rich pre { white-space: pre; overflow-x: auto; padding: 12px; background: #e8eeea; border-radius: 8px; }
+.rich :not(pre) > code { background: #e8eeea; border-radius: 4px; padding: 1px 4px; }
+.rich table { border-collapse: collapse; display: block; overflow-x: auto; }
+.rich th, .rich td { border: 1px solid #d5e2d9; padding: 6px 9px; }
+.rich .katex-display { overflow-x: auto; overflow-y: hidden; }
+.event strong { display: block; color: #356d58; margin-bottom: 3px; }
+details { margin-top: 8px; color: #556d63; }
+details pre { white-space: pre-wrap; overflow-wrap:anywhere; font: inherit; }
+label { display: block; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+textarea { resize: vertical; width: 100%; border: 1px solid #d6e4da; border-radius: 10px; padding: 12px; font: inherit; font-size: 14px; outline-color: #5ca789; }
+.form-footer { margin-top: 10px; }
+.form-buttons { display:flex; gap:8px; flex-shrink:0; }
+.form-footer span, footer { font-size: 11px; color: #879992; }
+footer { padding: 22px 2px; }
+@media (max-width: 760px) { .shell { padding: 22px 16px; } .layout { grid-template-columns: 1fr; } .conversation, .actions { min-height: 300px; } header { align-items: flex-start; } h1 { font-size: 25px; } .form-footer { align-items: flex-end; } }

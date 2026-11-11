@@ -1,0 +1,26 @@
+{
+  "summary": {"cases": 20, "hit@1": 0.9, "hit@3": 0.95, "answer_keyword_hit": 1.0, "avg_steps": 4.3, "avg_latency": 62.277194509999205, "tool_failure_rate": 0.0},
+  "rows": [
+    {"id": 1, "category": "retrieval", "hit1": true, "hit3": true, "answer_hit": true, "steps": 3, "failures": 0, "seconds": 45.67300719999912, "error": null},
+    {"id": 2, "category": "retrieval", "hit1": false, "hit3": true, "answer_hit": true, "steps": 8, "failures": 0, "seconds": 118.38762489999863, "error": null},
+    {"id": 3, "category": "retrieval", "hit1": true, "hit3": true, "answer_hit": true, "steps": 2, "failures": 0, "seconds": 19.31881979999889, "error": null},
+    {"id": 4, "category": "retrieval", "hit1": true, "hit3": true, "answer_hit": true, "steps": 3, "failures": 0, "seconds": 34.04547610000009, "error": null},
+    {"id": 5, "category": "retrieval", "hit1": true, "hit3": true, "answer_hit": true, "steps": 4, "failures": 0, "seconds": 47.59456129999671, "error": null},
+    {"id": 6, "category": "retrieval", "hit1": true, "hit3": true, "answer_hit": true, "steps": 5, "failures": 0, "seconds": 74.3626906999998, "error": null},
+    {"id": 7, "category": "retrieval", "hit1": true, "hit3": true, "answer_hit": true, "steps": 2, "failures": 0, "seconds": 33.26476420000108, "error": null},
+    {"id": 8, "category": "retrieval", "hit1": true, "hit3": true, "answer_hit": true, "steps": 3, "failures": 0, "seconds": 51.973414899999625, "error": null},
+    {"id": 9, "category": "retrieval", "hit1": true, "hit3": true, "answer_hit": true, "steps": 8, "failures": 0, "seconds": 114.91331340000033, "error": null},
+    {"id": 10, "category": "retrieval", "hit1": true, "hit3": true, "answer_hit": true, "steps": 3, "failures": 0, "seconds": 39.30965919999653, "error": null},
+    {"id": 11, "category": "retrieval", "hit1": true, "hit3": true, "answer_hit": true, "steps": 6, "failures": 0, "seconds": 95.71467249999841, "error": null},
+    {"id": 12, "category": "retrieval", "hit1": false, "hit3": false, "answer_hit": true, "steps": 6, "failures": 0, "seconds": 76.89314979999835, "error": null},
+    {"id": 13, "category": "tool", "hit1": true, "hit3": true, "answer_hit": true, "steps": 3, "failures": 0, "seconds": 43.763040299996646, "error": null},
+    {"id": 14, "category": "tool", "hit1": true, "hit3": true, "answer_hit": true, "steps": 3, "failures": 0, "seconds": 41.660830300003, "error": null},
+    {"id": 15, "category": "tool", "hit1": true, "hit3": true, "answer_hit": true, "steps": 4, "failures": 0, "seconds": 62.43637999999919, "error": null},
+    {"id": 16, "category": "tool", "hit1": true, "hit3": true, "answer_hit": true, "steps": 3, "failures": 0, "seconds": 38.91585209999903, "error": null},
+    {"id": 17, "category": "tool", "hit1": true, "hit3": true, "answer_hit": true, "steps": 4, "failures": 0, "seconds": 55.10615490000055, "error": null},
+    {"id": 18, "category": "reasoning", "hit1": true, "hit3": true, "answer_hit": true, "steps": 4, "failures": 0, "seconds": 65.62942999999723, "error": null},
+    {"id": 19, "category": "reasoning", "hit1": true, "hit3": true, "answer_hit": true, "steps": 4, "failures": 0, "seconds": 56.743862299998, "error": null},
+    {"id": 20, "category": "reasoning", "hit1": true, "hit3": true, "answer_hit": true, "steps": 8, "failures": 0, "seconds": 129.83718630000294, "error": null}
+  ],
+  "metadata": {"date": "2026-11-02", "corpus_repository": "https://github.com/datawhalechina/hello-agents", "corpus_commit": "36f583c233ea5cee4537ef93455702b55053af18", "chat_model": "deepseek-ai/DeepSeek-V4.1-Flash-1017", "chat_provider": "ModelScope API-Inference", "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2", "embedding_revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42", "case_commit": "10913d3", "note": "评测进程在开发中启动；执行期间修复了 SQLite 连接关闭和 token 中断记录，并增加多轮入口。单轮工具循环与检索指标定义未改变。"}
+}
